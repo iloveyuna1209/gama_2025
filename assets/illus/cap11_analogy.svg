@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect width="240" height="240" fill="#FFFFFF"/>
+  <g stroke="#1E2428" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Diner left -->
+    <circle cx="66" cy="82" r="18" fill="#FFF9E6"/>
+    <path d="M40 144 C40 116 92 116 92 144 Z" fill="#FFC000"/>
+    <!-- Server right -->
+    <circle cx="174" cy="82" r="18" fill="#E8F5F5"/>
+    <path d="M148 144 C148 116 200 116 200 144 Z" fill="#0A8485"/>
+    <!-- Table -->
+    <line x1="36" y1="144" x2="204" y2="144" stroke-width="4"/>
+    <line x1="120" y1="144" x2="120" y2="196" stroke-width="4"/>
+    <line x1="94" y1="196" x2="146" y2="196" stroke-width="4"/>
+    <!-- Two-way chat arrows -->
+    <path d="M96 64 H144 L136 56" stroke="#E03A33" stroke-width="3.5"/>
+    <path d="M144 82 H96 L104 90" stroke="#335E95" stroke-width="3.5"/>
+      </g>
+</svg>

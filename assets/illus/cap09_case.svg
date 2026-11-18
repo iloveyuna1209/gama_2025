@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect width="240" height="240" fill="#FFFFFF"/>
+  <g stroke="#1E2428" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <rect x="42" y="48" width="96" height="134" rx="8" fill="#FFFFFF"/>
+    <circle cx="72" cy="84" r="14" fill="#EEF3FA"/>
+    <rect x="52" y="74" width="40" height="16" rx="4" fill="#335E95"/>
+    <line x1="56" y1="116" x2="124" y2="116"/>
+    <line x1="56" y1="136" x2="124" y2="136"/>
+    <line x1="56" y1="156" x2="102" y2="156"/>
+    <!-- Privacy shield overlay -->
+    <path d="M160 88 L198 102 V140 C198 168 160 186 160 186 C160 186 122 168 122 140 V102 Z" fill="#0A8485"/>
+    <path d="M145 138 L156 150 L178 124" stroke="#FFFFFF" stroke-width="4.5"/>
+      </g>
+</svg>

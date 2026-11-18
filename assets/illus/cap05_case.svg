@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect width="240" height="240" fill="#FFFFFF"/>
+  <g stroke="#1E2428" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Ethics Scale top -->
+    <line x1="120" y1="30" x2="120" y2="92"/>
+    <line x1="78" y1="44" x2="162" y2="44"/>
+    <path d="M66 72 H90 L78 44 Z" fill="#FFF9E6"/>
+    <path d="M150 72 H174 L162 44 Z" fill="#FFF9E6"/>
+    <!-- Tractor bottom-left -->
+    <rect x="36" y="138" width="54" height="30" rx="6" fill="#77A123"/>
+    <rect x="44" y="116" width="28" height="22" rx="4" fill="#EEF3FA"/>
+    <circle cx="52" cy="176" r="18" fill="#335E95"/>
+    <circle cx="92" cy="182" r="11" fill="#FFC000"/>
+    <!-- Chat bubble + lock bottom-right -->
+    <rect x="132" y="120" width="76" height="50" rx="14" fill="#FDEFEF"/>
+    <path d="M150 170 L144 186 L166 170"/>
+    <rect x="156" y="138" width="28" height="20" rx="4" fill="#E03A33"/>
+    <path d="M162 138 V132 A8 8 0 0 1 178 132 V138"/>
+      </g>
+</svg>

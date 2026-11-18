@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect width="240" height="240" fill="#FFFFFF"/>
+  <g stroke="#1E2428" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M78 190 H148" stroke-width="4"/>
+    <path d="M96 190 V156 H124" />
+    <path d="M120 56 L102 126 L118 130 L136 60 Z" fill="#335E95"/>
+    <path d="M126 110 C152 118 154 166 118 174" />
+    <line x1="88" y1="146" x2="132" y2="146" stroke-width="4"/>
+    <!-- Molecular ring + AI nodes -->
+    <polygon points="175,54 196,66 196,90 175,102 154,90 154,66" fill="#F8ECF5"/>
+    <circle cx="175" cy="54" r="5" fill="#9B0D76"/>
+    <circle cx="196" cy="90" r="5" fill="#FFC000"/>
+    <circle cx="154" cy="90" r="5" fill="#0A8485"/>
+    <rect x="150" y="130" width="54" height="22" rx="11" fill="#E03A33" transform="rotate(-20 177 141)"/>
+      </g>
+</svg>
