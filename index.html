@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>創新管理中的人工智慧：創新能力之系統性回顧與 AI 應用分類法｜互動導讀簡報</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage">
+      <!-- Slide renders here -->
+      <div id="slide-root"></div>
+    </div>
+
+    <!-- Floating Presenter HUD -->
+    <div id="hud">
+      <button id="btn-prev" class="hud-btn" title="上一頁 (←)">◀</button>
+      <span id="hud-counter">p1 (1 / 40)</span>
+      <button id="btn-next" class="hud-btn" title="下一頁 (→ / Space)">▶</button>
+      <span class="hud-sep"></span>
+      <button id="btn-toc" class="hud-btn" title="投影片總覽 (G)">目錄</button>
+      <button id="btn-replay" class="hud-btn" title="重播本頁文字轉場 (R)">重播特效</button>
+      <button id="btn-anim-toggle" class="hud-btn active" title="切換文字動畫">動畫：開</button>
+      <button id="btn-fullscreen" class="hud-btn" title="全螢幕 (F)">全螢幕</button>
+    </div>
+    <div id="progress-bar"><div id="progress-fill"></div></div>
+  </div>
+
+  <!-- Slide Overview Drawer -->
+  <div id="toc-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel sketch-box">
+      <div class="modal-header">
+        <h2>投影片目錄總覽（39 + 1 頁）</h2>
+        <button id="btn-toc-close" class="hud-btn">✕ 關閉</button>
+      </div>
+      <div id="toc-grid"></div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox -->
+  <div id="lightbox" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="lightbox-card sketch-box">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-cap"></p>
+      <button id="btn-lb-close" class="hud-btn">✕ 關閉放大圖</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
