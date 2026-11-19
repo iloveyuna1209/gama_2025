@@ -776,7 +776,7 @@ window.SLIDES_DATA = [
     tag: "Q&A Q2",
     tagColor: "gold",
     title: "討論問題 Q2：賦能能力與增強能力的區別",
-    question: "問題：賦能與增強創新能力的區別是什麼？（比喻：AI 採用＝遊戲，企業＝玩家）",
+    question: "問題：賦能與增強創新能力的區別是什麼？",
     cards: [
       {
         header: "賦能能力＝遊戲「操作說明書」",
@@ -807,7 +807,7 @@ window.SLIDES_DATA = [
     type: "game",
     tag: "p28–p29 互動挑戰",
     tagColor: "coral",
-    title: "13 項創新能力配對小遊戲：投入正確籤筒！",
+    title: "13 項創新能力配對小遊戲！",
     source: "遊戲依據：Gama & Magistretti (2025) Figure 2 與簡報詳細分配 13 項能力"
   },
   {
@@ -829,6 +829,7 @@ window.SLIDES_DATA = [
     tag: "整合架構 2/2",
     tagColor: "coral",
     title: "採用目的 × TOE：實質改變與衝擊",
+    question: "這張表解釋目的影響在何處。企業把 AI 搬進公司，帶著不同目的導入時，T/O/E 分別受到了多大的實質改變與衝擊？",
     imgSrc: "assets/paper/table5_zh.png",
     cards: [
       {

@@ -610,6 +610,21 @@ strong[class^="kw-"] {
   line-height: 1.26;
 }
 
+.table5-grid .card-cap {
+  font-size: 16.5pt;
+  padding: 4px 12px;
+}
+
+.table5-grid .card-body {
+  padding: 6px 12px;
+  gap: 4px;
+}
+
+.table5-grid .bullet-list li {
+  font-size: 15.5pt;
+  line-height: 1.24;
+}
+
 /* Guess & QA Click-to-Reveal */
 .guess-card {
   flex: 1;

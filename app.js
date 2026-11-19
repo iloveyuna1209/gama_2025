@@ -115,36 +115,36 @@
       <svg viewBox="0 0 540 560" width="100%" height="100%" style="max-height:580px;">
         <g stroke="#1E2428" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" font-family="'Noto Serif TC', serif">
           <!-- AI應用 -->
-          <rect x="200" y="16" width="140" height="46" rx="12" fill="#E03A33"/>
-          <text x="270" y="46" text-anchor="middle" fill="#FFFFFF" stroke="none" font-size="20" font-weight="900">AI應用</text>
+          <rect x="200" y="14" width="140" height="44" rx="12" fill="#E03A33"/>
+          <text x="270" y="43" text-anchor="middle" fill="#FFFFFF" stroke="none" font-size="20" font-weight="900">AI應用</text>
           <!-- Branches to 取代 強化 揭示 -->
-          <path d="M270 62 V84 M110 84 H430 M110 84 V104 M270 84 V104 M430 84 V104"/>
-          <rect x="50" y="104" width="120" height="44" rx="10" fill="#FDEFEE"/>
-          <text x="110" y="133" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">取代</text>
-          <rect x="210" y="104" width="120" height="44" rx="10" fill="#FDEFEE"/>
-          <text x="270" y="133" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">強化</text>
-          <rect x="370" y="104" width="120" height="44" rx="10" fill="#FDEFEE"/>
-          <text x="430" y="133" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">揭示</text>
+          <path d="M270 58 V76 M110 76 H430 M110 76 V92 M270 76 V92 M430 76 V92"/>
+          <rect x="50" y="92" width="120" height="42" rx="10" fill="#FDEFEE"/>
+          <text x="110" y="120" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">取代</text>
+          <rect x="210" y="92" width="120" height="42" rx="10" fill="#FDEFEE"/>
+          <text x="270" y="120" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">強化</text>
+          <rect x="370" y="92" width="120" height="42" rx="10" fill="#FDEFEE"/>
+          <text x="430" y="120" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">揭示</text>
           <!-- Down to TOE -->
-          <path d="M110 148 V176 H430 V148 M270 148 V206"/>
-          <path d="M262 196 L270 208 L278 196"/>
+          <path d="M110 134 V158 H430 V134 M270 134 V196"/>
+          <path d="M262 186 L270 198 L278 186"/>
           <!-- Center TOE Circle -->
-          <circle cx="270" cy="274" r="64" fill="#FFF9E6"/>
-          <circle cx="270" cy="274" r="69" stroke-width="1.4" stroke-dasharray="14 6"/>
-          <text x="270" y="282" text-anchor="middle" fill="#1E2428" stroke="none" font-size="22" font-weight="900">TOE框架</text>
+          <circle cx="270" cy="270" r="62" fill="#FFF9E6"/>
+          <circle cx="270" cy="270" r="67" stroke-width="1.4" stroke-dasharray="14 6"/>
+          <text x="270" y="278" text-anchor="middle" fill="#1E2428" stroke="none" font-size="22" font-weight="900">TOE框架</text>
           <!-- Left AI採用 Circle -->
-          <circle cx="88" cy="274" r="56" fill="#335E95"/>
-          <circle cx="88" cy="274" r="61" stroke-width="1.4" stroke-dasharray="12 6"/>
-          <text x="88" y="282" text-anchor="middle" fill="#FFFFFF" stroke="none" font-size="22" font-weight="900">AI採用</text>
-          <path d="M148 274 H202 M192 266 L204 274 L192 282"/>
+          <circle cx="88" cy="270" r="54" fill="#335E95"/>
+          <circle cx="88" cy="270" r="59" stroke-width="1.4" stroke-dasharray="12 6"/>
+          <text x="88" y="278" text-anchor="middle" fill="#FFFFFF" stroke="none" font-size="22" font-weight="900">AI採用</text>
+          <path d="M150 270 H198 M188 262 L200 270 L188 278"/>
           <!-- Right T O E -->
-          <path d="M336 274 H378 M378 192 V356 M378 192 H408 M378 274 H408 M378 356 H408"/>
-          <rect x="410" y="168" width="114" height="44" rx="10" fill="#EEF3FA"/>
-          <text x="467" y="197" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">技術</text>
-          <rect x="410" y="252" width="114" height="44" rx="10" fill="#F2F7E8"/>
-          <text x="467" y="281" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">組織</text>
-          <rect x="410" y="334" width="114" height="44" rx="10" fill="#E8F5F5"/>
-          <text x="467" y="363" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">環境</text>
+          <path d="M337 270 H378 M378 209 V331 M378 209 H410 M378 270 H410 M378 331 H410"/>
+          <rect x="410" y="188" width="114" height="42" rx="10" fill="#EEF3FA"/>
+          <text x="467" y="216" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">技術</text>
+          <rect x="410" y="249" width="114" height="42" rx="10" fill="#F2F7E8"/>
+          <text x="467" y="277" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">組織</text>
+          <rect x="410" y="310" width="114" height="42" rx="10" fill="#E8F5F5"/>
+          <text x="467" y="338" text-anchor="middle" fill="#1E2428" stroke="none" font-size="20" font-weight="700">環境</text>
           <!-- Bottom 創新能力 -> 賦能/增強 -> TOE -->
           <path d="M270 378 V344 M262 354 L270 342 L278 354"/>
           <path d="M155 416 V378 H385 V416"/>
@@ -175,7 +175,7 @@
             <div class="cover-presenter anim-line" style="--ld:6">${s.presenter}</div>
           </div>
           <div class="cover-right anim-card" style="--d:1">
-            <div class="cover-diag-title">手繪理論架構圖</div>
+            <div class="cover-diag-title">架構地圖</div>
             ${renderCoverSVG()}
           </div>
         </div>
@@ -198,8 +198,8 @@
           </div>
           <div class="grid-3">
             ${s.steps
-              .map(
-                (st, i) => `
+          .map(
+            (st, i) => `
               <div class="sketch-card bg-${st.color} anim-card" style="--d:${i + 2}">
                 <div class="card-cap ${st.color}">${st.header}</div>
                 <div class="card-body">
@@ -207,8 +207,8 @@
                   ${renderBullets(st.items, i * 2 + 1)}
                 </div>
               </div>`
-              )
-              .join("")}
+          )
+          .join("")}
           </div>
         </div>
       `;
@@ -217,8 +217,8 @@
         <div class="lead-line anim-line" style="--ld:0">${s.lead}</div>
         <div class="grid-3">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 1}">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body">
@@ -226,54 +226,54 @@
                 ${renderBullets(c.bullets, i * 2 + 2)}
               </div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "columns2") {
       body = `
         <div class="grid-2">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 1}">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body">${renderBullets(c.bullets, i * 3)}</div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "columns2_simple") {
       body = `
         <div class="grid-2" style="padding-top:14px;">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 1}">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body" style="justify-content:center;font-size:26pt;line-height:1.35;">
                 <div class="anim-line" style="--ld:${i + 1}">${c.text}</div>
               </div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "columns3_simple") {
       body = `
         <div class="grid-3" style="padding-top:10px;">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 1}">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body" style="justify-content:center;font-size:25pt;line-height:1.32;">
                 <div class="anim-line" style="--ld:${i + 1}">${c.text}</div>
               </div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "split_1_2") {
@@ -299,8 +299,8 @@
       body = `
         <div class="grid-2x2">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 1}">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body" style="gap:3px;">
@@ -309,8 +309,8 @@
                 <div class="anim-line" style="--ld:${i * 2 + 2};font-weight:900;color:var(--${c.color === 'gold' ? 'blue' : c.color});">${c.note}</div>
               </div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "method_fig") {
@@ -318,14 +318,14 @@
         <div class="cap-grid" style="grid-template-columns:1.08fr 1fr;">
           <div class="stack-2">
             ${s.steps
-              .map(
-                (st, i) => `
+          .map(
+            (st, i) => `
               <div class="sketch-card bg-${st.color} anim-card" style="--d:${i + 1};flex:1;">
                 <div class="card-cap ${st.color}">${st.header}</div>
                 <div class="card-body"><div class="anim-line" style="--ld:${i + 1}">${st.text}</div></div>
               </div>`
-              )
-              .join("")}
+          )
+          .join("")}
           </div>
           <div class="sketch-box anim-card" style="--d:2;padding:10px;display:flex;flex-direction:column;align-items:center;">
             <div style="font-size:24pt;font-weight:900;margin-bottom:6px;">${s.imgTitle}</div>
@@ -342,14 +342,14 @@
           </div>
           <div class="stack-2">
             ${s.rightCards
-              .map(
-                (rc, i) => `
+          .map(
+            (rc, i) => `
               <div class="sketch-card bg-${rc.color} anim-card" style="--d:${i + 2};flex:1;">
                 <div class="card-cap ${rc.color}">${rc.header}</div>
                 <div class="card-body"><div class="anim-line" style="--ld:${i + 2}">${rc.text}</div></div>
               </div>`
-              )
-              .join("")}
+          )
+          .join("")}
           </div>
         </div>
       `;
@@ -380,25 +380,25 @@
       body = `
         <div class="grid-2" style="flex:0 0 auto;margin-bottom:12px;">
           ${s.topBoxes
-            .map(
-              (tb, i) => `
+          .map(
+            (tb, i) => `
             <div class="sketch-box bg-${tb.color} anim-card" style="--d:${i + 1};padding:10px 16px;">
               <div class="anim-line" style="--ld:${i};font-size:24pt;font-weight:900;color:var(--${tb.color});">${tb.title}</div>
               <div class="anim-line" style="--ld:${i + 1};font-size:24pt;line-height:1.18;">${tb.text}</div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
         <div class="grid-3">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 3}">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body">${renderBullets(c.bullets, i + 2)}</div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "qa_2col" || s.type === "qa_3col") {
@@ -411,20 +411,19 @@
             ${isOpen ? "隱藏解答" : "點擊揭曉答案"}
           </button>
         </div>
-        ${
-          isOpen
-            ? `<div class="${gridCls}">
+        ${isOpen
+          ? `<div class="${gridCls}">
                 ${s.cards
-                  .map(
-                    (c, i) => `
+            .map(
+              (c, i) => `
                   <div class="sketch-card bg-${c.color} reveal-box" style="animation-delay:${i * 90}ms">
                     <div class="card-cap ${c.color}">${c.header}</div>
                     <div class="card-body">${renderBullets(c.bullets, 0)}</div>
                   </div>`
-                  )
-                  .join("")}
+            )
+            .join("")}
               </div>`
-            : `<div class="qa-hidden-stage anim-card" style="--d:2">
+          : `<div class="qa-hidden-stage anim-card" style="--d:2">
                 <div class="qa-hidden-hint">思考一下！點擊右上方「點擊揭曉答案」按鈕（或按 A 鍵）顯示完整解答</div>
                 <button class="sketch-btn gold" data-qa-toggle="${s.id}">點我揭曉答案</button>
               </div>`
@@ -444,15 +443,14 @@
             <div class="anim-line" style="--ld:0">${s.questionPrompt}</div>
           </div>
         </div>
-        ${
-          isOpen
-            ? `<div class="sketch-card bg-teal reveal-box" style="flex:1;">
+        ${isOpen
+          ? `<div class="sketch-card bg-teal reveal-box" style="flex:1;">
                 <div class="card-cap teal">解答</div>
                 <div class="card-body" style="justify-content:center;font-size:28pt;line-height:1.45;padding:18px 22px;">
                   <div>${s.answerHtml}</div>
                 </div>
               </div>`
-            : `<div class="qa-hidden-stage anim-card" style="--d:2">
+          : `<div class="qa-hidden-stage anim-card" style="--d:2">
                 <div class="qa-hidden-hint">請先思考空格內應填入哪兩種能力，再點擊揭曉解答（或按 A 鍵）</div>
                 <button class="sketch-btn teal" data-qa-toggle="${s.id}">點我揭曉解答</button>
               </div>`
@@ -500,20 +498,17 @@
                 ${isRevealed ? `<button class="sketch-btn" style="font-size:14pt;padding:2px 10px;" data-guess-reset="${s.id}">重猜</button>` : ""}
               </div>
               <div class="card-body">
-                ${
-                  isRevealed
-                    ? `<div class="reveal-box">
-                        ${
-                          showFeedback
-                            ? `<div class="reveal-feedback ${isCorrect ? "ok" : "oops"}">${
-                                isCorrect ? "✓ 答對了！" : "✕ 再想一下，正確答案是："
-                              }</div>`
-                            : ""
-                        }
+                ${isRevealed
+          ? `<div class="reveal-box">
+                        ${showFeedback
+            ? `<div class="reveal-feedback ${isCorrect ? "ok" : "oops"}">${isCorrect ? "✓ 答對了！" : "✕ 再想一下，正確答案是："
+            }</div>`
+            : ""
+          }
                         <div class="reveal-title ${s.guessType}">${s.guessAnswer}</div>
                         <div style="font-size:17.5pt;line-height:1.3;">${s.guessReason}</div>
                       </div>`
-                    : `<div class="guess-prompt">
+          : `<div class="guess-prompt">
                         <div style="font-size:18pt;font-weight:700;color:var(--title);text-align:center;">這項能力屬於導入 AI 前或導入後？</div>
                         <div class="guess-btn-row">
                           <button class="sketch-btn gold" style="flex:1;" data-guess-pick="${s.id}:enabling">賦能能力 (Enabling)</button>
@@ -521,7 +516,7 @@
                         </div>
                         <button class="sketch-btn" style="font-size:15pt;padding:4px 12px;" data-guess-pick="${s.id}:reveal">直接點擊揭曉答案</button>
                       </div>`
-                }
+        }
               </div>
             </div>
           </div>
@@ -532,15 +527,15 @@
         <div class="lead-line anim-line" style="--ld:0">${s.question}</div>
         <div class="summary-list">
           ${s.rows
-            .map(
-              (r, i) => `
+          .map(
+            (r, i) => `
             <div class="summary-row ${r.type === "enabling" ? "bg-gold" : "bg-purple"} anim-card" style="--d:${i + 1}">
               <div class="summary-name">${r.name}</div>
               <div class="summary-q">${r.q}</div>
               <div class="summary-badge ${r.type}">${r.badge}</div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
         <div class="summary-takeaway ${s.ctxColor} anim-card" style="--d:${s.rows.length + 1}">${s.takeaway}</div>
       `;
@@ -561,19 +556,18 @@
                 <span class="tube-toe-count">${items.length} / ${expected}</span>
               </div>
               <div class="tube-toe-items">
-                ${
-                  items.length > 0
-                    ? items
-                        .map(
-                          (c) => `
+                ${items.length > 0
+              ? items
+                .map(
+                  (c) => `
                         <button type="button" class="tube-ball-kept ${gameState.activeExplainId === c.id ? "active" : ""}" data-kept-id="${c.id}" title="點擊查看能力解析">
                           <span class="ball-num">${String(c.id).padStart(2, "0")}</span>
                           <span>${c.name}</span>
                         </button>`
-                        )
-                        .join("")
-                    : `<span class="tube-toe-empty">拖曳或點擊投入「${t.label.split("｜")[1]}」能力</span>`
-                }
+                )
+                .join("")
+              : `<span class="tube-toe-empty">拖曳或點擊投入「${t.label.split("｜")[1]}」能力</span>`
+            }
               </div>
             </div>
           `;
@@ -594,21 +588,20 @@
           </div>
 
           <div class="ball-pool" id="ball-pool">
-            ${
-              unplaced.length > 0
-                ? unplaced
-                    .map(
-                      (c) => `
+            ${unplaced.length > 0
+          ? unplaced
+            .map(
+              (c) => `
                   <div class="cap-ball ${gameState.selectedBallId === c.id ? "selected" : ""}"
                        draggable="true"
                        data-ball-id="${c.id}">
                     <span class="ball-num">${String(c.id).padStart(2, "0")}</span>
                     <span>${c.name}</span>
                   </div>`
-                    )
-                    .join("")
-                : `<div class="ball-pool-done">🎉 太棒了！13 項能力已全數依 TOE 框架歸位（點擊籤筒內任意能力即可開啟彈出視窗回顧解析）</div>`
-            }
+            )
+            .join("")
+          : `<div class="ball-pool-done">🎉 太棒了！13 項能力已全數依 TOE 框架歸位（點擊籤筒內任意能力即可開啟彈出視窗回顧解析）</div>`
+        }
           </div>
 
           <div class="game-middle">
@@ -642,20 +635,27 @@
       `;
     } else if (s.type === "table5_split") {
       body = `
-        <div class="cap-grid" style="grid-template-columns:0.86fr 1.14fr;">
-          <div class="sketch-box anim-card" style="--d:1;padding:8px;display:flex;align-items:center;justify-content:center;">
-            <img class="paper-img" src="${s.imgSrc}" data-zoom="${s.imgSrc}" data-cap="表 5 AI 應用分類" style="max-height:550px;" />
+        ${
+          s.question
+            ? `<div class="sketch-box bg-coral anim-card" style="--d:1;padding:8px 16px;margin-bottom:10px;flex-shrink:0;">
+                <div class="anim-line" style="--ld:0;font-size:18pt;font-weight:900;line-height:1.3;color:var(--coral);text-align:center;">${s.question}</div>
+              </div>`
+            : ""
+        }
+        <div class="cap-grid table5-grid" style="grid-template-columns:0.88fr 1.12fr;">
+          <div class="sketch-box anim-card" style="--d:2;padding:8px;display:flex;align-items:center;justify-content:center;min-height:0;overflow:hidden;">
+            <img class="paper-img" src="${s.imgSrc}" data-zoom="${s.imgSrc}" data-cap="表 5 AI 應用分類" style="max-height:100%;max-width:100%;" />
           </div>
-          <div class="stack-2">
+          <div class="stack-2" style="gap:10px;">
             ${s.cards
-              .map(
-                (c, i) => `
-              <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 2};flex:1;">
+          .map(
+            (c, i) => `
+              <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 3};flex:1;min-height:0;">
                 <div class="card-cap ${c.color}">${c.header}</div>
                 <div class="card-body">${renderBullets(c.bullets, i * 2 + 1)}</div>
               </div>`
-              )
-              .join("")}
+          )
+          .join("")}
           </div>
         </div>
       `;
@@ -670,14 +670,14 @@
           <div class="card-body">
             <div class="grid-2x2" style="gap:10px;">
               ${s.actions
-                .map(
-                  (a, i) => `
+          .map(
+            (a, i) => `
                 <div class="sketch-box bg-${a.color} anim-line" style="--ld:${i + 2};padding:10px 14px;display:flex;flex-direction:column;justify-content:center;">
                   <div style="font-size:24pt;font-weight:900;color:var(--title);">${a.title}</div>
                   <div style="font-size:22pt;line-height:1.18;">${a.text}</div>
                 </div>`
-                )
-                .join("")}
+          )
+          .join("")}
             </div>
           </div>
         </div>
@@ -686,8 +686,8 @@
       body = `
         <div class="grid-2" style="gap:14px;">
           ${[s.left, s.right]
-            .map(
-              (col, i) => `
+          .map(
+            (col, i) => `
             <div style="display:flex;flex-direction:column;gap:10px;min-height:0;">
               <div class="sketch-card bg-${col.color} anim-card" style="--d:${i + 1};flex:0 0 auto;">
                 <div class="card-cap ${col.color}">${col.header}</div>
@@ -697,8 +697,8 @@
                 <img class="paper-img" src="${col.imgSrc}" data-zoom="${col.imgSrc}" data-cap="${col.imgLabel}" style="max-height:260px;" />
               </div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     } else if (s.type === "bridge") {
@@ -706,16 +706,16 @@
         <div class="lead-line anim-line" style="--ld:0;color:var(--purple);">${s.lead}</div>
         <div class="stack-2" style="flex:1;">
           ${s.cards
-            .map(
-              (c, i) => `
+          .map(
+            (c, i) => `
             <div class="sketch-card bg-${c.color} anim-card" style="--d:${i + 1};flex:1;">
               <div class="card-cap ${c.color}">${c.header}</div>
               <div class="card-body" style="justify-content:center;">
                 <div class="anim-line" style="--ld:${i + 1}">${c.text}</div>
               </div>
             </div>`
-            )
-            .join("")}
+          )
+          .join("")}
         </div>
       `;
     }
