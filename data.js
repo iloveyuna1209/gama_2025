@@ -432,8 +432,8 @@ window.SLIDES_DATA = [
     ctxColor: "blue",
     title: "能力 03：雙元能力",
     enSub: "Ambidextrous Competence",
-    analogyImg: "assets/illus/cap03_analogy.svg",
-    caseImg: "assets/illus/cap03_case.svg",
+    analogyImg: "assets/illus/cap03_analogy.jpg",
+    caseImg: "assets/illus/cap03_case.jpg",
     defBullets: [
       "<strong class='kw-blue'>定義</strong>：導入 AI 後能同時利用既有 IT 知識維持效率，並探索新技能創造差異化顧客價值。",
       "<strong class='kw-blue'>利用型 (Exploitative)</strong>：以既有 IT 降本增效 → <span class='analogy-tag'>如標準餐點與固定參數電器</span>。",
@@ -504,8 +504,8 @@ window.SLIDES_DATA = [
     ctxColor: "coral",
     title: "能力 05：數位專案治理",
     enSub: "Digital Project Governance",
-    analogyImg: "assets/illus/cap05_analogy.svg",
-    caseImg: "assets/illus/cap05_case.svg",
+    analogyImg: "assets/illus/cap05_analogy.jpg",
+    caseImg: "assets/illus/cap05_case.jpg",
     defBullets: [
       "<strong class='kw-coral'>定義</strong>：採用 AI 前透過內部政策、隱私準則、加密與專責職務制定專案管理程序。",
       "<strong class='kw-coral'>三大程序</strong>（<span class='analogy-tag'>如餐廳 QR 點餐與配方 SOP</span>）：資料管理 (Data management)、維護隱私 (User privacy)、所有權與知情同意 (Ownership & consent)。",
@@ -559,7 +559,7 @@ window.SLIDES_DATA = [
     title: "能力 07：流程最佳化",
     enSub: "Process Optimization",
     analogyImg: "assets/illus/cap07_analogy.jpg",
-    caseImg: "assets/illus/cap07_case.svg",
+    caseImg: "assets/illus/cap07_case.jpg",
     defBullets: [
       "<strong class='kw-coral'>定義</strong>：擷取並分析服務系統數據，改善或個人化服務互動，透過統計／認知／預測模型提升商業敏捷度。",
       "<strong class='kw-coral'>雙重效益</strong>：省成本並提升體驗 → <span class='analogy-tag'>如自動出餐系統減少用料錯誤與等待時間</span>。",
@@ -587,7 +587,7 @@ window.SLIDES_DATA = [
     title: "能力 08：自動問題解決",
     enSub: "Automatic Problem-Solving",
     analogyImg: "assets/illus/cap08_analogy.jpg",
-    caseImg: "assets/illus/cap08_case.svg",
+    caseImg: "assets/illus/cap08_case.jpg",
     defBullets: [
       "<strong class='kw-coral'>定義</strong>：在演算法支援下快速搜尋、提煉並排定點子優先順序，解決具價值問題、未滿足或未言明渴望。",
       "<strong class='kw-coral'>運作方式</strong>：從線上社群或群眾外包挑出有價值點子 → <span class='analogy-tag'>如餐廳參考美食評鑑掌握大眾口味喜好</span>。",
@@ -631,8 +631,8 @@ window.SLIDES_DATA = [
     ctxColor: "teal",
     title: "能力 09：法規篩查",
     enSub: "Screening Regulations",
-    analogyImg: "assets/illus/cap09_analogy.svg",
-    caseImg: "assets/illus/cap09_case.svg",
+    analogyImg: "assets/illus/cap09_analogy.jpg",
+    caseImg: "assets/illus/cap09_case.jpg",
     defBullets: [
       "<strong class='kw-teal'>定義</strong>：導入 AI 之前，持續審視與監控外部法規環境的常規能力（如 GDPR、CCPA、PDPA）。",
       "<strong class='kw-teal'>挑戰與比喻</strong>：AI 監管變化極快且各國標準不一，須防踩紅線 → <span class='analogy-tag'>如餐廳定期檢查食材符合食安規範並隨時更新</span>。",
@@ -683,8 +683,8 @@ window.SLIDES_DATA = [
     ctxColor: "teal",
     title: "能力 11：多模態價值共創",
     enSub: "Multimodal Value Co-Creation",
-    analogyImg: "assets/illus/cap11_analogy.svg",
-    caseImg: "assets/illus/cap11_case.svg",
+    analogyImg: "assets/illus/cap11_analogy.jpg",
+    caseImg: "assets/illus/cap11_case.jpg",
     defBullets: [
       "<strong class='kw-teal'>定義</strong>：導入 AI 後，與外部供應商、客戶、使用者等利害關係人展開迭代且協同的合作，透過高參與度與即時互動共創價值。",
       "<strong class='kw-teal'>溝通橋梁</strong>：AI 讓企業與利害關係人隨時雙向即時溝通，透過互相反饋動態調整服務。",
@@ -736,7 +736,7 @@ window.SLIDES_DATA = [
     title: "能力 13：以情境為基礎的知識分享",
     enSub: "Context-Based Knowledge Sharing",
     analogyImg: "assets/illus/cap13_analogy.jpg",
-    caseImg: "assets/illus/cap13_case.svg",
+    caseImg: "assets/illus/cap13_case.jpg",
     defBullets: [
       "<strong class='kw-teal'>定義</strong>：透過 AI 擴展內外部知識萃取、儲存、分析與分發，在不改原意下高精準高速轉移<strong class='kw-navy'>內隱 (Tacit)</strong> 與<strong class='kw-navy'>外顯 (Explicit)</strong> 知識。",
       "<strong class='kw-teal'>知識傳遞與比喻</strong>：AI 將隱性知識外化並助人內化 → <span class='analogy-tag'>如主廚將經驗手法編為手冊或書籍，供新進廚師實作與民眾在家自學</span>。"
@@ -1095,6 +1095,7 @@ window.GAME_CAPABILITIES = [
     id: 1,
     name: "功能能力",
     target: "enabling",
+    toe: "T",
     plainExplain: "團隊懂得蒐集、處理資料，並把 AI 演算法順利寫進產品或硬體（例如邊緣 AI 割草機）的工程實作力。",
     reason: "導入 AI 前，企業必須先具備把演算法整合到裝置與流程的內部功能專業，否則產品根本開發不出來。"
   },
@@ -1102,6 +1103,7 @@ window.GAME_CAPABILITIES = [
     id: 2,
     name: "資安管理",
     target: "enabling",
+    toe: "T",
     plainExplain: "保護 AI 系統與即時傳輸資料不被竊聽、越權偷看、惡意入侵或資料被竄改（例如離岸船舶防駭監控）。",
     reason: "在正式啟用 AI 服務前，企業必須先規劃好內外部漏洞的防護機制與應變流程，才能安全上線並建立信任。"
   },
@@ -1109,6 +1111,7 @@ window.GAME_CAPABILITIES = [
     id: 3,
     name: "雙元能力",
     target: "enhancing",
+    toe: "T",
     plainExplain: "一手用既有 IT 知識穩住日常效率，一手用 AI 探索全新突破（例如結合藥理資料庫與 AI 發現新抗生素 Halicin）。",
     reason: "是因為導入 AI 之後，領域專家得以擴大既有知識邊界並加速新知識產出，屬於導入後帶來的創新加速效果。"
   },
@@ -1116,6 +1119,7 @@ window.GAME_CAPABILITIES = [
     id: 4,
     name: "搜尋並重組知識",
     target: "enabling",
+    toe: "O",
     plainExplain: "主管主動找外部方案、撥出研發資源與低風險試錯空間，並透過獎勵與儀表板讓員工願意接觸 AI。",
     reason: "導入 AI 之前，組織必須先備妥資源、試錯文化與主管的探索支持，基層員工才不會抗拒而能跨部門嘗試。"
   },
@@ -1123,6 +1127,7 @@ window.GAME_CAPABILITIES = [
     id: 5,
     name: "數位專案治理",
     target: "enabling",
+    toe: "O",
     plainExplain: "訂立資料存取權限、隱私加密、知情同意與公平／問責／透明倫理規範，並定期檢查模型是否概念漂移。",
     reason: "導入 AI 之前就必須先立好規矩與道德邊界，否則導入後缺乏檢視標準，容易損害使用者或利害關係人權益。"
   },
@@ -1130,6 +1135,7 @@ window.GAME_CAPABILITIES = [
     id: 6,
     name: "強化決策",
     target: "enhancing",
+    toe: "O",
     plainExplain: "用演算法放大團隊感知力、精準評估並加速即時決策（例如 Unanimous AI 匯聚專家群體智慧），同時留意過度依賴。",
     reason: "精準評估、加速即時決策與精簡資源分配，都是 AI 導入組織後才產生的好處，用來放大並強化人類決策。"
   },
@@ -1137,6 +1143,7 @@ window.GAME_CAPABILITIES = [
     id: 7,
     name: "流程最佳化",
     target: "enhancing",
+    toe: "O",
     plainExplain: "擷取服務系統互動產生的數據來加速或個人化流程（例如 eBay 機器翻譯、澳洲稅務局預填報稅表單）。",
     reason: "必須先讓 AI 運行並產生互動數據，企業才能根據這些數據回頭改善並加速現有的產品或服務流程。"
   },
@@ -1144,6 +1151,7 @@ window.GAME_CAPABILITIES = [
     id: 8,
     name: "自動問題解決",
     target: "enhancing",
+    toe: "O",
     plainExplain: "靠演算法與監督式機器學習從社群或海量評論中篩選點子、排定優先順序（例如發掘無麩質啤酒需求）。",
     reason: "必須借助 AI 一次處理海量資訊並自動分類篩選，才能擴大組織找尋問題與形成創新假設的範圍。"
   },
@@ -1151,6 +1159,7 @@ window.GAME_CAPABILITIES = [
     id: 9,
     name: "法規篩查",
     target: "enabling",
+    toe: "E",
     plainExplain: "持續監控各國快速變動的隱私與 AI 法規（如 GDPR、CCPA、PDPA），確保不踩法律紅線（如履歷去識別化）。",
     reason: "法規篩查是企業採用 AI 的「合法執照」與「防護門檻」，導入前就必須先確認行為合法合規。"
   },
@@ -1158,6 +1167,7 @@ window.GAME_CAPABILITIES = [
     id: 10,
     name: "夥伴合作敏捷性",
     target: "enabling",
+    toe: "E",
     plainExplain: "快速協調外部供應商、技術夥伴與學研機構，建立策略／擴展／虛擬夥伴網絡並對齊目標（如瑞典礦業外包協作）。",
     reason: "導入 AI 之前必須先找好外部夥伴並談妥各方需求、目標與治理規範，就像動工前要先完成的「企劃書」。"
   },
@@ -1165,6 +1175,7 @@ window.GAME_CAPABILITIES = [
     id: 11,
     name: "多模態價值共創",
     target: "enhancing",
+    toe: "E",
     plainExplain: "把 AI 當作溝通橋梁，與外部客戶、供應商及使用者即時雙向互動並動態調整服務（如 Mastercard 即時防詐、醫療對話）。",
     reason: "跨組織利害關係人常有矛盾目標，是在導入 AI 之後才讓溝通簡化、回饋即時傳遞，促成產品與服務快速共創改善。"
   },
@@ -1172,6 +1183,7 @@ window.GAME_CAPABILITIES = [
     id: 12,
     name: "平台生態系統協調",
     target: "enhancing",
+    toe: "E",
     plainExplain: "用 AI 把零散能力打包成標準化雲端平台或 API（SaaS / PaaS），降低外部使用門檻（如 IBM Watson 開放雲端 API）。",
     reason: "必須先在企業內部導入 AI 並建立出標準化流程與規格，才能進一步打包成模組化生態系開放給外部串接。"
   },
@@ -1179,6 +1191,7 @@ window.GAME_CAPABILITIES = [
     id: 13,
     name: "以情境為基礎的知識分享",
     target: "enhancing",
+    toe: "E",
     plainExplain: "用 AI 高精準轉移內隱與外顯知識，把主觀經驗轉成可搜尋分析的結構（如 Symrise 用 GPT-3 對應調香筆記與偏好）。",
     reason: "需要 AI 先透過文字探勘、主題建模與情緒分析進行萃取，才能將隱性知識分類貼標並高精準傳遞給內外部夥伴。"
   }

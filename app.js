@@ -31,6 +31,17 @@
   const lbImg = document.getElementById("lightbox-img");
   const lbCap = document.getElementById("lightbox-cap");
   const btnLbClose = document.getElementById("btn-lb-close");
+  const gameExplainModal = document.getElementById("game-explain-modal");
+  const gameModalBadges = document.getElementById("game-modal-badges");
+  const gameModalTitle = document.getElementById("game-modal-title");
+  const gameModalBody = document.getElementById("game-modal-body");
+  const btnGameModalClose = document.getElementById("btn-game-modal-close");
+
+  const TOE_META = [
+    { key: "T", label: "T｜技術脈絡", color: "blue" },
+    { key: "O", label: "O｜組織脈絡", color: "coral" },
+    { key: "E", label: "E｜環境脈絡", color: "teal" }
+  ];
 
   function fitStage() {
     const pad = 20;
@@ -68,6 +79,32 @@
     lbImg.src = src;
     lbCap.textContent = caption || "";
     lightbox.classList.remove("hidden");
+  }
+
+  function openGameExplainModal(cap) {
+    if (!cap) return;
+    const toeInfo = TOE_META.find((t) => t.key === cap.toe) || TOE_META[0];
+    const isEnabling = cap.target === "enabling";
+    gameModalBadges.innerHTML = `
+      <span class="modal-pill ${toeInfo.color}">${toeInfo.label}</span>
+      <span class="modal-pill ${isEnabling ? "gold" : "purple"}">${isEnabling ? "賦能創新能力 (Enabling)" : "增強創新能力 (Enhancing)"}</span>
+    `;
+    gameModalTitle.textContent = `能力 ${String(cap.id).padStart(2, "0")}：${cap.name}`;
+    gameModalBody.innerHTML = `
+      <div class="explain-block plain">
+        <div class="explain-label">（1）此能力的白話解釋</div>
+        <div>${cap.plainExplain}</div>
+      </div>
+      <div class="explain-block ${isEnabling ? "reason-enabling" : "reason-enhancing"}">
+        <div class="explain-label">（2）為什麼屬於「${isEnabling ? "賦能創新能力" : "增強創新能力"}」？</div>
+        <div>${cap.reason}</div>
+      </div>
+    `;
+    gameExplainModal.classList.remove("hidden");
+  }
+
+  function closeGameExplainModal() {
+    gameExplainModal.classList.add("hidden");
   }
 
   function renderCoverSVG() {
@@ -471,15 +508,15 @@
                             : ""
                         }
                         <div class="reveal-title ${s.guessType}">${s.guessAnswer}</div>
-                        <div style="font-size:24pt;line-height:1.18;">${s.guessReason}</div>
+                        <div style="font-size:17.5pt;line-height:1.3;">${s.guessReason}</div>
                       </div>`
                     : `<div class="guess-prompt">
-                        <div style="font-size:22pt;font-weight:700;color:var(--title);text-align:center;">這項能力屬於導入 AI 前或導入後？</div>
+                        <div style="font-size:18pt;font-weight:700;color:var(--title);text-align:center;">這項能力屬於導入 AI 前或導入後？</div>
                         <div class="guess-btn-row">
                           <button class="sketch-btn gold" style="flex:1;" data-guess-pick="${s.id}:enabling">賦能能力 (Enabling)</button>
                           <button class="sketch-btn purple" style="flex:1;" data-guess-pick="${s.id}:enhancing">增強能力 (Enhancing)</button>
                         </div>
-                        <button class="sketch-btn" style="font-size:16pt;padding:4px 12px;" data-guess-pick="${s.id}:reveal">直接點擊揭曉答案</button>
+                        <button class="sketch-btn" style="font-size:15pt;padding:4px 12px;" data-guess-pick="${s.id}:reveal">直接點擊揭曉答案</button>
                       </div>`
                 }
               </div>
@@ -509,15 +546,42 @@
       const unplaced = gameCaps.filter((c) => !gameState.placed[c.id]);
       const enablingKept = gameCaps.filter((c) => gameState.placed[c.id] === "enabling");
       const enhancingKept = gameCaps.filter((c) => gameState.placed[c.id] === "enhancing");
-      const activeCap = gameState.activeExplainId ? gameCaps.find((c) => c.id === gameState.activeExplainId) : null;
+
+      const renderTubeTOE = (keptList) =>
+        TOE_META.map((t) => {
+          const items = keptList.filter((c) => c.toe === t.key);
+          return `
+            <div class="tube-toe-group ${t.color}">
+              <div class="tube-toe-label ${t.color}">
+                <span>${t.label}</span>
+                <span class="tube-toe-count">${items.length}</span>
+              </div>
+              <div class="tube-toe-items">
+                ${
+                  items.length > 0
+                    ? items
+                        .map(
+                          (c) => `
+                        <button type="button" class="tube-ball-kept ${gameState.activeExplainId === c.id ? "active" : ""}" data-kept-id="${c.id}" title="點擊查看能力解析">
+                          <span class="ball-num">${String(c.id).padStart(2, "0")}</span>
+                          <span>${c.name}</span>
+                        </button>`
+                        )
+                        .join("")
+                    : `<span class="tube-toe-empty">尚未投入</span>`
+                }
+              </div>
+            </div>
+          `;
+        }).join("");
 
       body = `
         <div id="game-toast" class="game-toast hidden"></div>
         <div class="game-layout">
           <div class="game-topbar">
             <div class="game-status">
-              拖曳（或點擊選球再點籤筒）將 13 項能力投入正確籤筒：已歸位 <strong class="kw-teal">${placedCount} / 13</strong>
-              ${placedCount === 13 ? " 🎉 全部配對完成！" : ""}
+              拖曳或點擊選球投入正確籤筒：已歸位 <strong class="kw-teal">${placedCount} / 13</strong>
+              ${placedCount === 13 ? " 🎉 全部完成！點擊能力看解析" : ""}
             </div>
             <div class="game-controls">
               <button class="game-btn-sm" id="btn-game-solve">一鍵歸位解答</button>
@@ -539,74 +603,24 @@
                   </div>`
                     )
                     .join("")
-                : `<div style="font-size:20pt;font-weight:900;color:var(--green);">🎉 太棒了！13 項能力已全數投入正確籤筒（可點擊籤筒內的球回顧解析）</div>`
+                : `<div class="ball-pool-done">🎉 太棒了！13 項能力已全數依 TOE 框架歸位（點擊籤筒內任意能力即可開啟彈出視窗回顧解析）</div>`
             }
           </div>
 
-          <div class="game-middle" style="min-height:365px;">
+          <div class="game-middle">
             <div class="tube-zone enabling" data-tube="enabling">
               <div class="tube-header">賦能創新能力籤筒（${enablingKept.length}/6）</div>
-              <div class="tube-sub">導入 AI「前」必備基礎條件</div>
+              <div class="tube-sub">導入 AI「前」必備基礎條件（依 TOE 分類顯示）</div>
               <div class="tube-vessel">
-                ${
-                  enablingKept.length > 0
-                    ? enablingKept
-                        .map(
-                          (c) => `
-                        <div class="tube-ball-kept ${gameState.activeExplainId === c.id ? "active" : ""}" data-kept-id="${c.id}">
-                          <span class="ball-num">${String(c.id).padStart(2, "0")}</span>
-                          <span>${c.name}</span>
-                        </div>`
-                        )
-                        .join("")
-                    : `<div class="tube-empty-hint">將「導入前」所需能力球<br/>拖曳至此籤筒</div>`
-                }
-              </div>
-            </div>
-
-            <div class="game-explain-card">
-              <div class="game-explain-cap">
-                ${activeCap ? `能力 ${String(activeCap.id).padStart(2, "0")}：${activeCap.name}` : "即時解析面板"}
-              </div>
-              <div class="game-explain-body">
-                ${
-                  activeCap
-                    ? `
-                      <div class="explain-block plain">
-                        <div class="explain-label">（1）此能力的白話解釋</div>
-                        <div>${activeCap.plainExplain}</div>
-                      </div>
-                      <div class="explain-block ${activeCap.target === "enabling" ? "reason-enabling" : "reason-enhancing"}">
-                        <div class="explain-label">（2）為什麼屬於「${activeCap.target === "enabling" ? "賦能創新能力" : "增強創新能力"}」？</div>
-                        <div>${activeCap.reason}</div>
-                      </div>
-                    `
-                    : `<div style="margin:auto;text-align:center;color:var(--muted);font-size:19pt;line-height:1.45;">
-                        把上方任意能力球拖曳到左／右籤筒中：<br/>
-                        • <strong>丟對</strong>：球留在籤筒中，並於此處即時顯示<br/>(1) 白話解釋 與 (2) 歸類理由！<br/>
-                        • <strong>丟錯</strong>：顯示失敗並彈回原位。
-                      </div>`
-                }
+                ${renderTubeTOE(enablingKept)}
               </div>
             </div>
 
             <div class="tube-zone enhancing" data-tube="enhancing">
               <div class="tube-header">增強創新能力籤筒（${enhancingKept.length}/7）</div>
-              <div class="tube-sub">導入 AI「後」轉化與創造之能力</div>
+              <div class="tube-sub">導入 AI「後」轉化與創造之能力（依 TOE 分類顯示）</div>
               <div class="tube-vessel">
-                ${
-                  enhancingKept.length > 0
-                    ? enhancingKept
-                        .map(
-                          (c) => `
-                        <div class="tube-ball-kept ${gameState.activeExplainId === c.id ? "active" : ""}" data-kept-id="${c.id}">
-                          <span class="ball-num">${String(c.id).padStart(2, "0")}</span>
-                          <span>${c.name}</span>
-                        </div>`
-                        )
-                        .join("")
-                    : `<div class="tube-empty-hint">將「導入後」產生能力球<br/>拖曳至此籤筒</div>`
-                }
+                ${renderTubeTOE(enhancingKept)}
               </div>
             </div>
           </div>
@@ -617,9 +631,9 @@
         <div class="sketch-box bg-purple anim-card" style="--d:1;padding:10px 16px;margin-bottom:12px;">
           <div class="anim-line" style="--ld:0;font-size:25pt;font-weight:900;color:var(--purple);">${s.question}</div>
         </div>
-        <div class="sketch-box anim-card" style="--d:2;flex:1;padding:12px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;min-height:0;">
-          <img class="paper-img" src="${s.imgSrc}" data-zoom="${s.imgSrc}" data-cap="${s.caption}" style="max-height:400px;" />
-          <div style="font-size:16pt;font-weight:700;color:var(--title);text-align:center;">${s.caption}</div>
+        <div class="sketch-box anim-card" style="--d:2;flex:1;padding:10px 12px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;min-height:0;">
+          <img class="paper-img" src="${s.imgSrc}" data-zoom="${s.imgSrc}" data-cap="${s.caption}" style="max-height:375px;" />
+          <div style="font-size:15pt;font-weight:700;color:var(--title);text-align:center;">${s.caption}</div>
         </div>
       `;
     } else if (s.type === "table5_split") {
@@ -721,8 +735,9 @@
       gameState.placed[cap.id] = targetTube;
       gameState.selectedBallId = null;
       gameState.activeExplainId = cap.id;
-      render();
+      render(false);
       showToast(`✓ 正確！「${cap.name}」屬於${targetTube === "enabling" ? "賦能" : "增強"}創新能力`, "success");
+      openGameExplainModal(cap);
     } else {
       gameState.selectedBallId = null;
       const el = root.querySelector(`.cap-ball[data-ball-id="${cap.id}"]`);
@@ -750,7 +765,7 @@
       // Click-to-select fallback
       b.addEventListener("click", () => {
         gameState.selectedBallId = gameState.selectedBallId === id ? null : id;
-        render();
+        render(false);
       });
     });
 
@@ -779,8 +794,10 @@
 
     root.querySelectorAll(".tube-ball-kept").forEach((kept) => {
       kept.addEventListener("click", () => {
-        gameState.activeExplainId = Number(kept.dataset.keptId);
-        render();
+        const id = Number(kept.dataset.keptId);
+        gameState.activeExplainId = id;
+        render(false);
+        openGameExplainModal(gameCaps.find((c) => c.id === id));
       });
     });
 
@@ -788,7 +805,8 @@
     if (resetBtn) {
       resetBtn.addEventListener("click", () => {
         gameState = { placed: {}, selectedBallId: null, activeExplainId: null };
-        render();
+        closeGameExplainModal();
+        render(false);
       });
     }
     const solveBtn = document.getElementById("btn-game-solve");
@@ -797,9 +815,11 @@
         gameCaps.forEach((c) => {
           gameState.placed[c.id] = c.target;
         });
-        gameState.activeExplainId = 1;
+        gameState.activeExplainId = null;
         gameState.selectedBallId = null;
-        render();
+        closeGameExplainModal();
+        render(false);
+        showToast("✓ 13 項能力已全數依 TOE 框架歸位，點擊任一能力可查看解析！", "success");
       });
     }
   }
@@ -909,11 +929,19 @@
   btnLbClose.addEventListener("click", () => lightbox.classList.add("hidden"));
   lightbox.querySelector(".modal-backdrop").addEventListener("click", () => lightbox.classList.add("hidden"));
 
+  btnGameModalClose.addEventListener("click", closeGameExplainModal);
+  gameExplainModal.querySelector(".modal-backdrop").addEventListener("click", closeGameExplainModal);
+
   document.addEventListener("keydown", (e) => {
-    if (!tocModal.classList.contains("hidden") || !lightbox.classList.contains("hidden")) {
+    if (
+      !tocModal.classList.contains("hidden") ||
+      !lightbox.classList.contains("hidden") ||
+      !gameExplainModal.classList.contains("hidden")
+    ) {
       if (e.key === "Escape") {
         tocModal.classList.add("hidden");
         lightbox.classList.add("hidden");
+        closeGameExplainModal();
       }
       return;
     }
