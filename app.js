@@ -24,6 +24,9 @@
   const btnReplay = document.getElementById("btn-replay");
   const btnAnimToggle = document.getElementById("btn-anim-toggle");
   const btnFullscreen = document.getElementById("btn-fullscreen");
+  const hud = document.getElementById("hud");
+  const btnHudHide = document.getElementById("btn-hud-hide");
+  const btnHudShow = document.getElementById("btn-hud-show");
   const tocModal = document.getElementById("toc-modal");
   const tocGrid = document.getElementById("toc-grid");
   const btnTocClose = document.getElementById("btn-toc-close");
@@ -547,14 +550,15 @@
       const enablingKept = gameCaps.filter((c) => gameState.placed[c.id] === "enabling");
       const enhancingKept = gameCaps.filter((c) => gameState.placed[c.id] === "enhancing");
 
-      const renderTubeTOE = (keptList) =>
+      const renderTubeTOE = (keptList, tubeType) =>
         TOE_META.map((t) => {
           const items = keptList.filter((c) => c.toe === t.key);
+          const expected = gameCaps.filter((c) => c.target === tubeType && c.toe === t.key).length;
           return `
-            <div class="tube-toe-group ${t.color}">
+            <div class="tube-toe-group ${t.color}" data-drop-tube="${tubeType}" data-drop-toe="${t.key}">
               <div class="tube-toe-label ${t.color}">
                 <span>${t.label}</span>
-                <span class="tube-toe-count">${items.length}</span>
+                <span class="tube-toe-count">${items.length} / ${expected}</span>
               </div>
               <div class="tube-toe-items">
                 ${
@@ -568,7 +572,7 @@
                         </button>`
                         )
                         .join("")
-                    : `<span class="tube-toe-empty">尚未投入</span>`
+                    : `<span class="tube-toe-empty">拖曳或點擊投入「${t.label.split("｜")[1]}」能力</span>`
                 }
               </div>
             </div>
@@ -580,7 +584,7 @@
         <div class="game-layout">
           <div class="game-topbar">
             <div class="game-status">
-              拖曳或點擊選球投入正確籤筒：已歸位 <strong class="kw-teal">${placedCount} / 13</strong>
+              拖曳或點擊選球投入對應「籤筒 × TOE 區塊」：已歸位 <strong class="kw-teal">${placedCount} / 13</strong>
               ${placedCount === 13 ? " 🎉 全部完成！點擊能力看解析" : ""}
             </div>
             <div class="game-controls">
@@ -610,17 +614,17 @@
           <div class="game-middle">
             <div class="tube-zone enabling" data-tube="enabling">
               <div class="tube-header">賦能創新能力籤筒（${enablingKept.length}/6）</div>
-              <div class="tube-sub">導入 AI「前」必備基礎條件（依 TOE 分類顯示）</div>
+              <div class="tube-sub">導入 AI「前」必備基礎條件（請投入下方對應 TOE 區塊）</div>
               <div class="tube-vessel">
-                ${renderTubeTOE(enablingKept)}
+                ${renderTubeTOE(enablingKept, "enabling")}
               </div>
             </div>
 
             <div class="tube-zone enhancing" data-tube="enhancing">
               <div class="tube-header">增強創新能力籤筒（${enhancingKept.length}/7）</div>
-              <div class="tube-sub">導入 AI「後」轉化與創造之能力（依 TOE 分類顯示）</div>
+              <div class="tube-sub">導入 AI「後」轉化與創造之能力（請投入下方對應 TOE 區塊）</div>
               <div class="tube-vessel">
-                ${renderTubeTOE(enhancingKept)}
+                ${renderTubeTOE(enhancingKept, "enhancing")}
               </div>
             </div>
           </div>
@@ -728,15 +732,21 @@
     t._timer = setTimeout(() => t.classList.add("hidden"), 1500);
   }
 
-  function attemptDrop(ballId, targetTube) {
+  function attemptDrop(ballId, targetTube, targetToe) {
     const cap = gameCaps.find((c) => c.id === Number(ballId));
     if (!cap) return;
-    if (cap.target === targetTube) {
+    const tubeOk = cap.target === targetTube;
+    const toeOk = cap.toe === targetToe;
+    const toeInfo = TOE_META.find((t) => t.key === targetToe);
+    if (tubeOk && toeOk) {
       gameState.placed[cap.id] = targetTube;
       gameState.selectedBallId = null;
       gameState.activeExplainId = cap.id;
       render(false);
-      showToast(`✓ 正確！「${cap.name}」屬於${targetTube === "enabling" ? "賦能" : "增強"}創新能力`, "success");
+      showToast(
+        `✓ 正確！「${cap.name}」屬於${targetTube === "enabling" ? "賦能" : "增強"} × ${toeInfo ? toeInfo.label : targetToe}`,
+        "success"
+      );
       openGameExplainModal(cap);
     } else {
       gameState.selectedBallId = null;
@@ -746,13 +756,19 @@
         void el.offsetWidth;
         el.classList.add("fail-shake");
       }
-      showToast(`✕ 配對失敗！「${cap.name}」不屬於此籤筒，請再想想導入前或導入後！`, "error");
+      if (tubeOk && !toeOk) {
+        showToast(`✕ 籤筒對了，但 TOE 脈絡不對！「${cap.name}」不屬於${toeInfo ? toeInfo.label : targetToe}`, "error");
+      } else if (!tubeOk && toeOk) {
+        showToast(`✕ TOE 脈絡對了，但籤筒不對！請再想想導入前或導入後！`, "error");
+      } else {
+        showToast(`✕ 配對失敗！「${cap.name}」不屬於此區塊，請再想想導入前後與 T/O/E 脈絡！`, "error");
+      }
     }
   }
 
   function bindGameEvents() {
     const balls = root.querySelectorAll(".cap-ball");
-    const tubes = root.querySelectorAll(".tube-zone");
+    const dropZones = root.querySelectorAll(".tube-toe-group[data-drop-tube][data-drop-toe]");
 
     balls.forEach((b) => {
       const id = Number(b.dataset.ballId);
@@ -769,25 +785,26 @@
       });
     });
 
-    tubes.forEach((tube) => {
-      const target = tube.dataset.tube;
-      tube.addEventListener("dragover", (e) => {
+    dropZones.forEach((zone) => {
+      const targetTube = zone.dataset.dropTube;
+      const targetToe = zone.dataset.dropToe;
+      zone.addEventListener("dragover", (e) => {
         e.preventDefault();
-        tube.classList.add("drag-over");
+        zone.classList.add("drag-over");
       });
-      tube.addEventListener("dragleave", () => tube.classList.remove("drag-over"));
-      tube.addEventListener("drop", (e) => {
+      zone.addEventListener("dragleave", () => zone.classList.remove("drag-over"));
+      zone.addEventListener("drop", (e) => {
         e.preventDefault();
-        tube.classList.remove("drag-over");
+        zone.classList.remove("drag-over");
         const id = e.dataTransfer.getData("text/plain");
-        if (id) attemptDrop(id, target);
+        if (id) attemptDrop(id, targetTube, targetToe);
       });
 
-      // Click tube if a ball is selected
-      tube.addEventListener("click", (e) => {
+      // Click TOE zone if a ball is selected
+      zone.addEventListener("click", (e) => {
         if (e.target.closest(".tube-ball-kept")) return;
         if (gameState.selectedBallId) {
-          attemptDrop(gameState.selectedBallId, target);
+          attemptDrop(gameState.selectedBallId, targetTube, targetToe);
         }
       });
     });
@@ -932,6 +949,13 @@
   btnGameModalClose.addEventListener("click", closeGameExplainModal);
   gameExplainModal.querySelector(".modal-backdrop").addEventListener("click", closeGameExplainModal);
 
+  function setHudHidden(hidden) {
+    hud.classList.toggle("hud-hidden", hidden);
+    btnHudShow.classList.toggle("hidden", !hidden);
+  }
+  btnHudHide.addEventListener("click", () => setHudHidden(true));
+  btnHudShow.addEventListener("click", () => setHudHidden(false));
+
   document.addEventListener("keydown", (e) => {
     if (
       !tocModal.classList.contains("hidden") ||
@@ -969,6 +993,8 @@
       tocModal.classList.remove("hidden");
     } else if (e.key.toLowerCase() === "f") {
       btnFullscreen.click();
+    } else if (e.key.toLowerCase() === "h") {
+      setHudHidden(!hud.classList.contains("hud-hidden"));
     }
   });
 

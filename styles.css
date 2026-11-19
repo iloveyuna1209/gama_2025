@@ -129,12 +129,12 @@ body {
 }
 
 .card-body {
-  padding: 8px 14px;
+  padding: 10px 16px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 5px;
+  justify-content: center;
+  gap: 8px;
   font-size: 18pt;
   line-height: 1.28;
   overflow-y: auto;
@@ -321,23 +321,16 @@ strong[class^="kw-"] {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-evenly;
+  flex: 1;
+  gap: 6px;
 }
 
 .bullet-list li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 0;
   font-size: 18pt;
   line-height: 1.26;
-}
-
-.bullet-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: 900;
-  color: var(--ink);
 }
 
 /* Cover Slide (p1) */
@@ -536,14 +529,20 @@ strong[class^="kw-"] {
 
 .cap-def-row {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
   flex: 1;
+  height: 100%;
 }
 
 .cap-def-text {
   flex: 1;
   min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cap-def-text .bullet-list li {
@@ -591,12 +590,19 @@ strong[class^="kw-"] {
 
 .case-inner {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
 }
 
 .case-text {
   flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .case-text .bullet-list li {
@@ -1034,6 +1040,13 @@ strong[class^="kw-"] {
   background: rgba(255, 255, 255, 0.9);
   min-height: 0;
   overflow: hidden;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, outline-color 0.14s ease;
+  cursor: pointer;
+}
+.tube-toe-group.drag-over {
+  outline: 3px solid var(--blue);
+  transform: scale(1.015);
+  box-shadow: 0 4px 12px rgba(51, 94, 149, 0.25);
 }
 
 .tube-toe-group.blue {
@@ -1378,6 +1391,33 @@ strong[class^="kw-"] {
   padding: 5px 12px;
   box-shadow: 2px 3px 0 var(--ink);
   z-index: 50;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+#hud.hud-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(18px);
+}
+.hud-restore-btn {
+  position: fixed;
+  bottom: 12px;
+  right: 18px;
+  z-index: 50;
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 2px 2px 0 var(--ink);
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.18s ease, background 0.15s ease;
+}
+.hud-restore-btn:hover {
+  opacity: 1;
+  background: var(--gold-tint);
 }
 
 .hud-btn {

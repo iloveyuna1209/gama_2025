@@ -481,9 +481,9 @@ window.SLIDES_DATA = [
     defBullets: [
       "<strong class='kw-coral'>定義</strong>：導入 AI 前，管理者主動探尋外部方案與內部知識，提撥資源與空間，並透過經驗分享、回饋與激勵，鼓勵員工試誤實驗的常規與文化。",
       "<strong class='kw-coral'>關鍵作為</strong>：",
-      "• 提供員工低風險小規模試錯的機會與資源。",
-      "• 在組織普及 AI 知識，凝聚採用共識。",
-      "• 推動跨部門創新並找尋外部解決方案。"
+      "提供員工低風險小規模試錯的機會與資源。",
+      "在組織普及 AI 知識，凝聚採用共識。",
+      "推動跨部門創新並找尋外部解決方案。"
     ],
     caseTitle: "案例：通用汽車與礦業設備",
     caseBullets: [
@@ -564,8 +564,8 @@ window.SLIDES_DATA = [
       "<strong class='kw-coral'>定義</strong>：擷取並分析服務系統數據，改善或個人化服務互動，透過統計／認知／預測模型提升商業敏捷度。",
       "<strong class='kw-coral'>雙重效益</strong>：省成本並提升體驗 → <span class='analogy-tag'>如自動出餐系統減少用料錯誤與等待時間</span>。",
       "<strong class='kw-coral'>任務差異</strong>：",
-      "• <strong class='kw-blue'>機械式 (Mechanical)／分析型 (Analytical)</strong>：適合 AI（如配餐自動化）。",
-      "• <strong class='kw-purple'>直覺式 (Intuitive)／同理型 (Empathetic)</strong>：須謹慎（如點餐禮儀服務）。"
+      "<strong class='kw-blue'>機械式 (Mechanical)／分析型 (Analytical)</strong>：適合 AI（如配餐自動化）。",
+      "<strong class='kw-purple'>直覺式 (Intuitive)／同理型 (Empathetic)</strong>：須謹慎（如點餐禮儀服務）。"
     ],
     caseTitle: "案例：eBay 與澳洲稅務局 ATO",
     caseBullets: [
