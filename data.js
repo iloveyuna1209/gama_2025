@@ -1083,7 +1083,7 @@ window.SLIDES_DATA = [
       {
         header: "引導問題 03｜能力的移動性與載具",
         color: "coral",
-        text: "Gama & Magistretti 論文預設只要具備足夠的賦能創新能力，企業就能成功推動 AI 採用，但並沒有考慮到<strong class='kw-coral'>這項創新能力是可能移動的，並取決於這項能力存在的載具中</strong>。"
+        text: "Gama & Magistretti 論文只有提到企業需要去具備賦能創新能力，但並沒有考慮到<strong class='kw-coral'>這項創新能力是可能移動的，並且也取決於這項能力存在的載具中</strong>。"
       }
     ],
     source: "來源：Chen, Balasubramanian, & Forman (2024)；簡報詳細分配 p39"
